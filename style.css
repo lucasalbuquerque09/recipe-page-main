@@ -1,0 +1,217 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Define color variables */
+:root {
+    --White: #ffffff;
+
+    --Stone100: #f3e6d8;
+    --Stone150: #e4ded8;
+    --Stone600: #5f574e;
+    --Stone900: #302d2c;
+
+    --Brown800: #854632;
+
+    --Rose800: #7b284f;
+    --Rose50: #fff5fa;
+
+
+    --fontOutfit: "Outfit", sans-serif;
+    --fontYoung: "Young Serif", serif;
+}
+/*  global styles */
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: var(--Stone100);
+}
+
+section {
+    padding: 0 5%;
+}
+
+h1,
+h2 {
+    font-family: var(--fontYoung);
+}
+
+h2 {
+    color: var(--Brown800);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+p,
+li,
+td,
+th {
+    color: var(--Stone600);
+    font-family: var(--fontOutfit);
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+/* main content */
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--White);
+    /* box-img */
+    .box-img img {
+        width: 100%;
+    }
+    /* container recipe */
+    .recipe {
+        h1 {
+            color: var(--Stone900);
+            font-size: clamp(2rem, 3vw, 3rem);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        /* box time */
+        .time {
+            margin-top: 50px;
+
+            h2 {
+                color: var(--Rose800);
+                font-size: clamp(1.2rem, 3vw, 1.5rem);
+                font-family: var(--fontOutfit);
+                font-weight: 600;
+                margin-left: 20px;
+
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-left: 50px;
+
+
+                li {
+                    text-align: start;
+
+                    span {
+                        color: var(--Stone600);
+                        font-weight: 700;
+                    }
+
+                    &::marker {
+                        color: var(--Rose800);
+                        display: inline-block;
+                        font-size: 1rem;
+                    }
+                }
+
+
+
+            }
+        }
+
+    }
+    /* container ingredients */
+    .ingredients {
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 25px;
+
+
+            li {
+                text-align: start;
+
+                &::marker {
+                    color: var(--Brown800);
+                    display: inline-block;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    /* container instructions */
+    .instructions {
+
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-left: 25px;
+
+
+            li {
+                padding-left: 1rem;
+
+                span {
+                    color: var(--Stone600);
+                    font-weight: 700;
+                }
+
+                &::marker {
+                    color: var(--Brown800);
+                    display: inline-block;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    /* container nutrition */
+    .nutrition {
+        margin-bottom: 30px;
+
+        table {
+            margin-top: 20px;
+            width: 100%;
+            margin-left: 30px;
+
+
+            td {
+                color: var(--Brown800);
+                font-weight: 700;
+            }
+
+
+            th {
+                padding: 15px;
+                font-weight: 400;
+            }
+
+
+
+        }
+    }
+}
+/* styles for larger screens */
+@media (min-width: 768px) {
+
+    .main-content {
+        overflow: hidden;
+        max-width: 700px;
+        margin: 50px 0;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+
+        .box-img {
+            padding: 5%;
+            overflow: hidden;
+            img {
+                display: block;
+                border-radius: 15px;
+            }
+        }
+    }
+}
