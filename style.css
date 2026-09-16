@@ -61,12 +61,13 @@ th {
 
 /* main content */
 .main-content {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 50px;
     background-color: var(--White);
+    overflow-x: hidden;
     /* box-img */
     .box-img img {
         width: 100%;
